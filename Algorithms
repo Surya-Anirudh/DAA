@@ -1,0 +1,105 @@
+1. 0/1 Knapsack Problem
+Algorithm:
+
+Initialize a 2D array K[n+1][W+1] to 0.
+For each item i from 1 to n:
+For each weight w from 1 to W:
+If the weight of item i is less than or equal to w:
+K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w])
+Else:
+K[i][w] = K[i-1][w]
+The value K[n][W] is the maximum value that can be carried.
+2. Fractional Knapsack Problem
+Algorithm:
+
+Sort items based on the value-to-weight ratio in descending order.
+Initialize total_value to 0.
+For each item in the sorted list:
+If the item's weight is less than or equal to the remaining capacity W:
+Add the item's full value to total_value.
+Decrease W by the item's weight.
+Else:
+Add the fraction of the item's value proportional to the remaining capacity W.
+Break the loop.
+The total_value is the maximum value that can be carried.
+3. Traveling Salesman Problem (TSP)
+Algorithm:
+
+Initialize min_path to infinity.
+Generate all permutations of the vertices.
+For each permutation:
+Calculate the total distance of the tour starting and ending at the initial vertex.
+Update min_path if the current tour's distance is less.
+The min_path is the shortest possible tour.
+4. Graph Coloring Problem
+Algorithm:
+
+Initialize all vertices with no color.
+Assign the first color to the first vertex.
+For each subsequent vertex:
+Assign the smallest possible color that is not used by its adjacent vertices.
+If all vertices are colored with at most m colors, the solution exists.
+5. Shortest Path (Dijkstra's Algorithm)
+Algorithm:
+
+Initialize distances from the source to all vertices as infinity and distance to the source itself as 0.
+Use a priority queue to extract the vertex with the minimum distance.
+For each adjacent vertex, calculate the new distance and update if it is smaller.
+Repeat until all vertices are processed.
+The distance array represents the shortest path from the source to each vertex.
+6. All-Pairs Shortest Path (Floyd-Warshall Algorithm)
+Algorithm:
+
+Initialize the distance matrix same as the input graph matrix.
+For each intermediate vertex k:
+For each pair of vertices (i, j):
+Update dist[i][j] as min(dist[i][j], dist[i][k] + dist[k][j]).
+The dist matrix will contain the shortest distances between every pair of vertices.
+7. Minimal Spanning Tree (Kruskal's Algorithm)
+Algorithm:
+
+Sort all edges in non-decreasing order of their weight.
+Initialize an empty spanning tree.
+For each edge in the sorted list:
+Check if the current edge forms a cycle with the spanning tree.
+If not, include the edge in the spanning tree.
+Repeat until there are V-1 edges in the spanning tree.
+8. Job Sequencing Problem
+Algorithm:
+
+Sort jobs in decreasing order of profit.
+Initialize the result sequence as empty.
+For each job:
+Find the latest available slot before its deadline.
+If a slot is found, add the job to the sequence.
+The job sequence maximizes profit.
+9. N-Queen Problem
+Algorithm:
+
+Place queens one by one in different rows, starting from the leftmost column.
+For each column, try placing a queen in all rows.
+Check if placing the queen violates the constraints.
+If placing the queen is safe, mark this cell and move to the next column.
+If all queens are placed, return the solution.
+If no safe place is found for a queen in a column, backtrack and remove the queen from the previous column.
+10. Huffman Coding
+Algorithm:
+
+Create a priority queue and insert all characters with their frequencies.
+While there is more than one node in the queue:
+Extract the two nodes with the smallest frequencies.
+Create a new internal node with these two nodes as children and the sum of their frequencies as the new frequency.
+Insert the new node into the queue.
+The remaining node is the root of the Huffman Tree.
+Traverse the tree to assign binary codes to characters.
+11. Matrix Chain Multiplication
+Algorithm:
+
+Initialize a 2D array m to store the minimum number of multiplications.
+For each chain length l from 2 to n:
+For each subchain starting at i and ending at j:
+Set m[i][j] to infinity.
+For each possible split k between i and j:
+Calculate the cost of splitting at k and update m[i][j] if it is smaller.
+The value m[1][n-1] is the minimum number of multiplications required to multiply the matrices.
+These pseudocode algorithms outline the basic steps required to solve each problem.
