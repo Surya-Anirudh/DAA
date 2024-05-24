@@ -1,0 +1,17 @@
+TIME COMPLEXITY OF ALL
+zerone: space complexity: O(nW) and time complexity: O(nW)
+fracknap: space complexity: O(n) and time complexity: O(n log n)
+huffman: space complexity: O(n) and time complexity: O(n log n)
+queen2: space complexity: O(n^2) and time complexity: O(n!)
+graphcol: space complexity: O(V) and time complexity: O(V+E)
+matrixchain: space complexity: O(n^2) and time complexity: O(n^3)
+tspbb: space complexity: O(n^2) and time complexity: O(n^2 * 2^n)
+lcs: space complexity: O(mn) and time complexity: O(mn)
+zeronebb: space complexity: O(n) and time complexity: O(2^n)
+floyed: space complexity: O(n^2) and time complexity: O(n^3)
+tspdp: space complexity: O(n * 2^n) and time complexity: O(n^2 * 2^n)
+jobseq: space complexity: O(n) and time complexity: O(n log n)
+dijkstra: space complexity: O(V^2) and time complexity: O(V^2)
+kruskal: space complexity: O(E) and time complexity: O(E log V)
+prims: space complexity: O(V+E) and time complexity: O(E logV)
+bellman: space complexity: O(V) and time complexity: O(VE
